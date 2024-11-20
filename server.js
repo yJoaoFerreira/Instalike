@@ -1,4 +1,7 @@
 import express from 'express'
+import conectarAoBanco from './src/config/dbconfig.js';
+
+await conectarAoBanco(process.env.STRING_CONEXAO);
 
 const posts = [
     {id: 1, descricao: "Uma foto teste", imagem: "https://placecats.com/millie/300/150"},
